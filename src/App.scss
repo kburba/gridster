@@ -1,0 +1,124 @@
+$filled: #f1f1f1;
+$hover: #f8f8f8;
+$down: #e2e2e2;
+$clear: #ffffff;
+$start: #7ed321;
+$end: #639530;
+$shortest: #f5a624;
+$default: #4a90e2;
+$defaultHover: #76b5ff;
+$defaultDown: #235897;
+
+.start {
+  background-color: $start;
+}
+.end {
+  background-color: $end;
+}
+.clear {
+  background-color: $clear;
+}
+.shortest {
+  background-color: $shortest;
+}
+
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  color: grey;
+}
+
+.logo {
+  margin: 25px 0;
+  max-width: 250px;
+  img {
+    width: 100%;
+  }
+}
+
+.gridInputs {
+  display: flex;
+  align-items: flex-end;
+  background-color: $filled;
+  padding: 15px 25px;
+}
+
+.grids {
+  margin-top: 25px;
+  background-color: $filled;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+
+  .gridRow {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+
+    .gridColumn {
+      border: 1px solid lightgrey;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
+      min-height: 50px;
+      min-width: 50px;
+    }
+  }
+}
+
+.margin {
+  &--top {
+    margin-top: 7px;
+    &__medium {
+      margin-top: 15px;
+    }
+  }
+  &--left {
+    margin-left: 7px;
+
+    &__medium {
+      margin-left: 15px;
+    }
+  }
+
+  &--right {
+    margin-right: 7px;
+    &__medium {
+      margin-left: 15px;
+    }
+  }
+}
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+
+  input {
+    max-width: 35px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 4px 8px;
+    text-align: center;
+    color: grey;
+    margin-top: 7px;
+  }
+}
+button {
+  border: 1px solid transparent;
+  background-color: $default;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
+
+  &:hover {
+    background-color: $defaultHover;
+  }
+
+  &:active {
+    background-color: $defaultDown;
+  }
+}
